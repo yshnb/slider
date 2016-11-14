@@ -21813,7 +21813,7 @@
 	    var slider = this.refs.slider;
 	    var rect = slider.getBoundingClientRect();
 	
-	    return this.props.vertical ? rect.top : rect.left;
+	    return this.props.vertical ? window.scrollY + rect.top : window.scrollX + rect.left;
 	  };
 	
 	  Slider.prototype.getPrecision = function getPrecision(step) {
